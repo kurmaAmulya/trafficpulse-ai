@@ -15,6 +15,3 @@ server/dist/
 
 # Logs
 *.log
-
-#local OS/editor files
-.DS_store
