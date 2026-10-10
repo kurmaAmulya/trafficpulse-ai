@@ -1,0 +1,385 @@
+export const initialUsers = [
+  {
+    _id: 'usr_01',
+    name: 'Inspector Vikram Rathore',
+    email: 'officer@traffic.gov',
+    password: 'password123',
+    role: 'officer',
+    phone: '+91 98110 44552',
+    badgeNumber: 'TP-DL-4482',
+    assignedVehicle: '',
+    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80'
+  },
+  {
+    _id: 'usr_02',
+    name: 'Administrator (HQ Traffic Control)',
+    email: 'admin@traffic.gov',
+    password: 'password123',
+    role: 'admin',
+    phone: '+91 11 2345 6789',
+    badgeNumber: 'HQ-CTRL-01',
+    assignedVehicle: '',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80'
+  },
+  {
+    _id: 'usr_03',
+    name: 'Rajesh Sharma',
+    email: 'owner@citizen.in',
+    password: 'password123',
+    role: 'owner',
+    phone: '+91 98765 43210',
+    badgeNumber: '',
+    assignedVehicle: 'DL-01-AB-1234',
+    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80'
+  },
+  {
+    _id: 'usr_04',
+    name: 'Amit Kumar',
+    email: 'driver@citizen.in',
+    password: 'password123',
+    role: 'driver',
+    phone: '+91 98991 12233',
+    badgeNumber: '',
+    assignedVehicle: 'DL-01-AB-1234',
+    avatar: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150&auto=format&fit=crop&q=80'
+  },
+  {
+    _id: 'usr_05',
+    name: 'Pooja Verma',
+    email: 'citizen@citizen.in',
+    password: 'password123',
+    role: 'citizen',
+    phone: '+91 97112 33445',
+    badgeNumber: '',
+    assignedVehicle: '',
+    avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80'
+  }
+];
+
+export const initialVehicles = [
+  {
+    _id: 'veh_01',
+    registrationNumber: 'DL-01-AB-1234',
+    makeModel: 'Hyundai Creta SX (O)',
+    type: 'Car',
+    color: 'Polar White',
+    ownerName: 'Rajesh Sharma',
+    ownerEmail: 'owner@citizen.in',
+    ownerPhone: '+91 98765 43210',
+    linkedDriverName: 'Amit Kumar',
+    linkedDriverEmail: 'driver@citizen.in',
+    registrationDate: new Date('2022-04-15'),
+    insuranceExpiry: new Date('2027-04-14'),
+    pollutionCertExpiry: new Date('2026-11-20'),
+    status: 'Active'
+  },
+  {
+    _id: 'veh_02',
+    registrationNumber: 'HR-26-EQ-9012',
+    makeModel: 'Tata Nexon EV Max',
+    type: 'EV',
+    color: 'Daytona Grey',
+    ownerName: 'Rajesh Sharma',
+    ownerEmail: 'owner@citizen.in',
+    ownerPhone: '+91 98765 43210',
+    linkedDriverName: '',
+    linkedDriverEmail: '',
+    registrationDate: new Date('2023-08-10'),
+    insuranceExpiry: new Date('2028-08-09'),
+    pollutionCertExpiry: new Date('2027-08-10'),
+    status: 'Active'
+  },
+  {
+    _id: 'veh_03',
+    registrationNumber: 'MH-02-CZ-7788',
+    makeModel: 'Royal Enfield Classic 350',
+    type: 'Motorcycle',
+    color: 'Stealth Black',
+    ownerName: 'Sunil Rao',
+    ownerEmail: 'sunil.rao@sample.in',
+    ownerPhone: '+91 98200 11223',
+    linkedDriverName: '',
+    linkedDriverEmail: '',
+    registrationDate: new Date('2021-02-19'),
+    insuranceExpiry: new Date('2026-12-15'),
+    pollutionCertExpiry: new Date('2026-10-30'),
+    status: 'Active'
+  },
+  {
+    _id: 'veh_04',
+    registrationNumber: 'UP-16-BX-4040',
+    makeModel: 'Tata Ace Gold Mini Truck',
+    type: 'Truck',
+    color: 'Yellow & White',
+    ownerName: 'Speedline Logistics Ltd',
+    ownerEmail: 'dispatch@speedline.in',
+    ownerPhone: '+91 120 445566',
+    linkedDriverName: 'Ramesh Yadav',
+    linkedDriverEmail: 'ramesh.driver@sample.in',
+    registrationDate: new Date('2020-09-01'),
+    insuranceExpiry: new Date('2026-09-01'),
+    pollutionCertExpiry: new Date('2026-11-05'),
+    status: 'Active'
+  },
+  {
+    _id: 'veh_05',
+    registrationNumber: 'KA-05-MJ-3311',
+    makeModel: 'Bajaj RE Auto-Rickshaw',
+    type: 'Auto-Rickshaw',
+    color: 'Yellow & Green',
+    ownerName: 'Manjunath Gowda',
+    ownerEmail: 'manju.auto@sample.in',
+    ownerPhone: '+91 98450 77889',
+    linkedDriverName: 'Manjunath Gowda',
+    linkedDriverEmail: 'manju.auto@sample.in',
+    registrationDate: new Date('2019-11-12'),
+    insuranceExpiry: new Date('2026-11-10'),
+    pollutionCertExpiry: new Date('2026-12-01'),
+    status: 'Active'
+  }
+];
+
+export const initialViolations = [
+  {
+    _id: 'vio_01',
+    violationNumber: 'VIO-2026-1001',
+    vehicleNumber: 'DL-01-AB-1234',
+    violationType: 'Speeding',
+    location: 'Outer Ring Road (Near IIT Flyover), New Delhi',
+    coordinates: { lat: 28.5452, lng: 77.1926 },
+    dateTime: new Date(Date.now() - 3600000 * 4), // 4 hours ago
+    description: 'Vehicle clocked at 88 km/h in a designated 50 km/h municipal school corridor.',
+    evidenceUrl: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800&auto=format&fit=crop&q=80',
+    detectedBy: 'Speed Radar',
+    status: 'Verified',
+    reportedByEmail: 'system.radar@traffic.gov',
+    reportedByName: 'Outer Ring Road Automated Speed Radar #4',
+    reviewedByOfficer: 'Inspector Vikram Rathore',
+    reviewNotes: 'Speed confirmed by dual optical sensors. Challan automatically generated.',
+    fineAmount: 2000,
+    createdAt: new Date(Date.now() - 3600000 * 4)
+  },
+  {
+    _id: 'vio_02',
+    violationNumber: 'VIO-2026-1002',
+    vehicleNumber: 'DL-01-AB-1234',
+    violationType: 'Red Light Jumping',
+    location: 'Janpath - Tolstoy Marg Intersection, New Delhi',
+    coordinates: { lat: 28.6256, lng: 77.2185 },
+    dateTime: new Date(Date.now() - 3600000 * 24), // 1 day ago
+    description: 'Crossed stop line 4.2 seconds into red signal phase during evening peak traffic.',
+    evidenceUrl: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=800&auto=format&fit=crop&q=80',
+    detectedBy: 'CCTV AI Camera',
+    status: 'Verified',
+    reportedByEmail: 'cctv.ai@traffic.gov',
+    reportedByName: 'Smart CCTV Camera CAM-ND-01',
+    reviewedByOfficer: 'Inspector Vikram Rathore',
+    reviewNotes: 'Clear stop-line violation. E-challan dispatched to registered owner.',
+    fineAmount: 1000,
+    createdAt: new Date(Date.now() - 3600000 * 24)
+  },
+  {
+    _id: 'vio_03',
+    violationNumber: 'VIO-2026-1003',
+    vehicleNumber: 'MH-02-CZ-7788',
+    violationType: 'No Helmet',
+    location: 'Bandra-Kurla Complex (BKC) Junction, Mumbai',
+    coordinates: { lat: 19.0660, lng: 72.8687 },
+    dateTime: new Date(Date.now() - 3600000 * 18),
+    description: 'Both rider and pillion passenger spotted without standard safety helmets.',
+    evidenceUrl: 'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=800&auto=format&fit=crop&q=80',
+    detectedBy: 'Citizen Report',
+    status: 'Pending',
+    reportedByEmail: 'citizen@citizen.in',
+    reportedByName: 'Pooja Verma',
+    reviewedByOfficer: '',
+    reviewNotes: '',
+    fineAmount: 1000,
+    createdAt: new Date(Date.now() - 3600000 * 18)
+  },
+  {
+    _id: 'vio_04',
+    violationNumber: 'VIO-2026-1004',
+    vehicleNumber: 'HR-26-EQ-9012',
+    violationType: 'Wrong-Way Driving',
+    location: 'Cyber City Cyber Hub Exit Ramp, Gurugram',
+    coordinates: { lat: 28.4950, lng: 77.0895 },
+    dateTime: new Date(Date.now() - 3600000 * 2), // 2 hours ago
+    description: 'Vehicle driving against flow of one-way entry lane causing severe congestion.',
+    evidenceUrl: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&auto=format&fit=crop&q=80',
+    detectedBy: 'Citizen Report',
+    status: 'Under Review',
+    reportedByEmail: 'citizen@citizen.in',
+    reportedByName: 'Pooja Verma',
+    reviewedByOfficer: 'Inspector Vikram Rathore',
+    reviewNotes: 'Investigating camera angle timestamps to cross-verify lane direction.',
+    fineAmount: 5000,
+    createdAt: new Date(Date.now() - 3600000 * 2)
+  },
+  {
+    _id: 'vio_05',
+    violationNumber: 'VIO-2026-1005',
+    vehicleNumber: 'UP-16-BX-4040',
+    violationType: 'Illegal Parking',
+    location: 'Connaught Place Inner Circle, Block B, New Delhi',
+    coordinates: { lat: 28.6328, lng: 77.2197 },
+    dateTime: new Date(Date.now() - 3600000 * 48),
+    description: 'Commercial carrier parked in designated emergency / ambulance bay.',
+    evidenceUrl: 'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&auto=format&fit=crop&q=80',
+    detectedBy: 'Patrol Officer',
+    status: 'Verified',
+    reportedByEmail: 'officer@traffic.gov',
+    reportedByName: 'Inspector Vikram Rathore',
+    reviewedByOfficer: 'Inspector Vikram Rathore',
+    reviewNotes: 'Vehicle towed and fine issued.',
+    fineAmount: 1500,
+    createdAt: new Date(Date.now() - 3600000 * 48)
+  },
+  {
+    _id: 'vio_06',
+    violationNumber: 'VIO-2026-1006',
+    vehicleNumber: 'KA-05-MJ-3311',
+    violationType: 'Using Mobile Phone',
+    location: 'Indiranagar 100ft Road, Bengaluru',
+    coordinates: { lat: 12.9784, lng: 77.6408 },
+    dateTime: new Date(Date.now() - 3600000 * 12),
+    description: 'Driver visibly handling cellular smartphone while operating vehicle in motion.',
+    evidenceUrl: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&auto=format&fit=crop&q=80',
+    detectedBy: 'Citizen Report',
+    status: 'Rejected',
+    reportedByEmail: 'citizen@citizen.in',
+    reportedByName: 'Pooja Verma',
+    reviewedByOfficer: 'Inspector Vikram Rathore',
+    reviewNotes: 'Evidence photo is blurry and vehicle number plate is not clearly legible.',
+    fineAmount: 1500,
+    createdAt: new Date(Date.now() - 3600000 * 12)
+  }
+];
+
+export const initialFines = [
+  {
+    _id: 'fin_01',
+    fineNumber: 'CHL-2026-9041',
+    violationNumber: 'VIO-2026-1001',
+    vehicleNumber: 'DL-01-AB-1234',
+    ownerName: 'Rajesh Sharma',
+    ownerEmail: 'owner@citizen.in',
+    linkedDriverEmail: 'driver@citizen.in',
+    violationType: 'Speeding',
+    location: 'Outer Ring Road (Near IIT Flyover), New Delhi',
+    amount: 2000,
+    dueDate: new Date(Date.now() + 86400000 * 14),
+    status: 'Pending',
+    paymentDate: null,
+    transactionRef: '',
+    paymentMethod: ''
+  },
+  {
+    _id: 'fin_02',
+    fineNumber: 'CHL-2026-9042',
+    violationNumber: 'VIO-2026-1002',
+    vehicleNumber: 'DL-01-AB-1234',
+    ownerName: 'Rajesh Sharma',
+    ownerEmail: 'owner@citizen.in',
+    linkedDriverEmail: 'driver@citizen.in',
+    violationType: 'Red Light Jumping',
+    location: 'Janpath - Tolstoy Marg Intersection, New Delhi',
+    amount: 1000,
+    dueDate: new Date(Date.now() - 86400000 * 2),
+    status: 'Paid',
+    paymentDate: new Date(Date.now() - 86400000 * 1),
+    transactionRef: 'UPI-HDFC-9928371625',
+    paymentMethod: 'UPI'
+  },
+  {
+    _id: 'fin_03',
+    fineNumber: 'CHL-2026-9043',
+    violationNumber: 'VIO-2026-1005',
+    vehicleNumber: 'UP-16-BX-4040',
+    ownerName: 'Speedline Logistics Ltd',
+    ownerEmail: 'dispatch@speedline.in',
+    linkedDriverEmail: 'ramesh.driver@sample.in',
+    violationType: 'Illegal Parking',
+    location: 'Connaught Place Inner Circle, Block B, New Delhi',
+    amount: 1500,
+    dueDate: new Date(Date.now() + 86400000 * 10),
+    status: 'Pending',
+    paymentDate: null,
+    transactionRef: '',
+    paymentMethod: ''
+  }
+];
+
+export const initialCameras = [
+  {
+    _id: 'cam_01',
+    cameraId: 'CAM-ND-01',
+    name: 'Janpath Junction Cam Alpha',
+    locationName: 'Connaught Place Outer Circle, New Delhi',
+    zone: 'Delhi Central - Zone 1',
+    status: 'Active',
+    fps: 30,
+    resolution: '1080p 60FPS',
+    aiModel: 'YOLOv11-Traffic-Demo',
+    isDemoSimulation: true,
+    lastPlateDetected: 'DL-01-AB-1234',
+    speedDetectedKmH: 48,
+    recentDetections: [
+      { plate: 'DL-01-AB-1234', violation: 'Speed Normal', confidence: 98.4, timestamp: new Date(), speed: 48 },
+      { plate: 'HR-26-EQ-9012', violation: 'Speed Normal', confidence: 97.1, timestamp: new Date(Date.now() - 120000), speed: 42 },
+      { plate: 'UP-16-BX-4040', violation: 'Lane Departure Warning', confidence: 89.2, timestamp: new Date(Date.now() - 360000), speed: 52 }
+    ]
+  },
+  {
+    _id: 'cam_02',
+    cameraId: 'CAM-ND-02',
+    name: 'IIT Flyover Radar Vision',
+    locationName: 'Outer Ring Road Flyover, New Delhi',
+    zone: 'Delhi South - Zone 3',
+    status: 'Active',
+    fps: 60,
+    resolution: '4K UltraHD',
+    aiModel: 'DeepSpeed-OCR-v4',
+    isDemoSimulation: true,
+    lastPlateDetected: 'DL-08-CC-4991',
+    speedDetectedKmH: 79,
+    recentDetections: [
+      { plate: 'DL-08-CC-4991', violation: 'Speeding (79 in 50 zone)', confidence: 96.5, timestamp: new Date(), speed: 79 },
+      { plate: 'DL-01-AB-1234', violation: 'Speeding (88 in 50 zone)', confidence: 99.1, timestamp: new Date(Date.now() - 240000), speed: 88 }
+    ]
+  },
+  {
+    _id: 'cam_03',
+    cameraId: 'CAM-MUM-01',
+    name: 'BKC Central Hub Surveillance',
+    locationName: 'Bandra-Kurla Complex Expressway, Mumbai',
+    zone: 'Mumbai West - Zone 2',
+    status: 'Active',
+    fps: 30,
+    resolution: '1080p 30FPS',
+    aiModel: 'HelmetSense-YOLO',
+    isDemoSimulation: true,
+    lastPlateDetected: 'MH-02-CZ-7788',
+    speedDetectedKmH: 35,
+    recentDetections: [
+      { plate: 'MH-02-CZ-7788', violation: 'No Helmet Detected', confidence: 94.8, timestamp: new Date(Date.now() - 180000), speed: 35 }
+    ]
+  },
+  {
+    _id: 'cam_04',
+    cameraId: 'CAM-BLR-01',
+    name: 'MG Road Junction Intelligent Cam',
+    locationName: 'MG Road Trinity Circle, Bengaluru',
+    zone: 'Bengaluru Central',
+    status: 'Active',
+    fps: 30,
+    resolution: '1080p',
+    aiModel: 'DistractedDriver-Vision',
+    isDemoSimulation: true,
+    lastPlateDetected: 'KA-05-MJ-3311',
+    speedDetectedKmH: 28,
+    recentDetections: [
+      { plate: 'KA-05-MJ-3311', violation: 'Phone Handling Observed', confidence: 91.2, timestamp: new Date(Date.now() - 300000), speed: 28 }
+    ]
+  }
+];
